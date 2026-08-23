@@ -17,7 +17,7 @@ public class HorsEntity extends BaseAggressiveMonster {
         return Monster.createLivingAttributes()
                 .add(Attributes.MAX_HEALTH, 15D)
                 .add(Attributes.FOLLOW_RANGE, 100f)
-                .add(Attributes.MOVEMENT_SPEED, 0.8f)
+                .add(Attributes.MOVEMENT_SPEED, 1f)
                 .add(Attributes.ATTACK_DAMAGE, 8f)
                 .add(Attributes.ATTACK_KNOCKBACK, 0.5f);
     }
