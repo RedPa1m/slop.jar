@@ -7,6 +7,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.redpalm.slopjar.SlopJar;
+import net.redpalm.slopjar.entity.custom.AyCabronEntity;
 import net.redpalm.slopjar.entity.custom.FrenchManEntity;
 import net.redpalm.slopjar.entity.custom.HorsEntity;
 import net.redpalm.slopjar.entity.custom.SlopperEntity;
@@ -25,6 +26,9 @@ public class ModEntities {
     public static final RegistryObject<EntityType<FrenchManEntity>> FRENCHMAN =
             ENTITY_TYPES.register("frenchman", () -> EntityType.Builder.of(FrenchManEntity::new, MobCategory.MONSTER)
                     .sized(1.75f, 1.75f).build("frenchman"));
+    public static final RegistryObject<EntityType<AyCabronEntity>> AYCABRON =
+            ENTITY_TYPES.register("aycabron", () -> EntityType.Builder.of(AyCabronEntity::new, MobCategory.CREATURE)
+                    .sized(1.75f, 1.75f).build("aycabron"));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

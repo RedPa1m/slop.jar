@@ -6,6 +6,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.redpalm.slopjar.SlopJar;
 import net.redpalm.slopjar.entity.ModEntities;
+import net.redpalm.slopjar.entity.model.AyCabronModel;
 import net.redpalm.slopjar.entity.model.HorsModel;
 import net.redpalm.slopjar.entity.renderer.FrenchManRenderer;
 import net.redpalm.slopjar.entity.renderer.HorsRenderer;
@@ -16,6 +17,7 @@ public class ModBusClientEvents {
     @SubscribeEvent
     public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(HorsModel.LAYER_LOCATION, HorsModel::createBodyLayer);
+        event.registerLayerDefinition(AyCabronModel.LAYER_LOCATION, AyCabronModel::createBodyLayer);
         //event.registerLayerDefinition(SlopperModel.LAYER_LOCATION, SlopperModel::createBodyLayer);
 
     }

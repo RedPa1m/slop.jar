@@ -1,6 +1,10 @@
 package net.redpalm.slopjar.event;
 
+import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.animal.horse.Horse;
+import net.minecraft.world.level.Level;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -23,6 +27,37 @@ public class EventHandler {
             if (entity == null) return;
             horse.level().addFreshEntity(entity);
         }
+    }
+
+    @SubscribeEvent
+    public static void levelTickEvent (TickEvent.LevelTickEvent tick) {
+        if (tick.phase != TickEvent.Phase.END) return;
+        if (!(tick.level instanceof ServerLevel)) return;
+        if (tick.level.isClientSide) return;
+        if (tick.level.dimension() != Level.OVERWORLD) return;
+        if (tick.level.getServer().getPlayerList().getPlayers().isEmpty()) return;
+
+        if (tick.level.getGameTime() % 12000 == 0 && tick.level.random.nextInt(5) == 0) {
+            int x = tick.level.random.nextInt(5);
+            switch (x) {
+                case 0:
+                    broadcastMessage(tick, "Geometry Dash");
+                case 1:
+                    broadcastMessage(tick, "Minecraft");
+                case 2:
+                    broadcastMessage(tick, "Videogaem");
+                case 3:
+                    broadcastMessage(tick, "контр страйк");
+                case 4:
+                    broadcastMessage(tick, "RuPaul's Drag Race");
+            }
+        }
+
+    }
+
+    public static void broadcastMessage (TickEvent.LevelTickEvent tick, String speech) {
+        tick.level.getServer().getPlayerList().broadcastSystemMessage
+                (Component.literal(speech), false);
     }
 
 }
