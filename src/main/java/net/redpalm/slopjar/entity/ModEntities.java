@@ -22,10 +22,10 @@ public class ModEntities {
                     .sized(1.75f, 1.75f).build("hors"));
     public static final RegistryObject<EntityType<SlopperEntity>> SLOPPER =
             ENTITY_TYPES.register("slopper", () -> EntityType.Builder.of(SlopperEntity::new, MobCategory.MONSTER)
-                    .sized(2.25f, 1.75f).build("slopper"));
+                    .sized(1.75f, 0.6f).build("slopper"));
     public static final RegistryObject<EntityType<FrenchManEntity>> FRENCHMAN =
             ENTITY_TYPES.register("frenchman", () -> EntityType.Builder.of(FrenchManEntity::new, MobCategory.MONSTER)
-                    .sized(1.75f, 1.75f).build("frenchman"));
+                    .sized(1.75f, 0.6f).build("frenchman"));
     public static final RegistryObject<EntityType<AyCabronEntity>> AYCABRON =
             ENTITY_TYPES.register("aycabron", () -> EntityType.Builder.of(AyCabronEntity::new, MobCategory.CREATURE)
                     .sized(1.75f, 1.75f).build("aycabron"));
