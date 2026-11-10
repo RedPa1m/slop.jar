@@ -8,6 +8,7 @@ import net.redpalm.slopjar.SlopJar;
 import net.redpalm.slopjar.entity.ModEntities;
 import net.redpalm.slopjar.entity.model.AyCabronModel;
 import net.redpalm.slopjar.entity.model.HorsModel;
+import net.redpalm.slopjar.entity.renderer.AyCabronRenderer;
 import net.redpalm.slopjar.entity.renderer.FrenchManRenderer;
 import net.redpalm.slopjar.entity.renderer.HorsRenderer;
 import net.redpalm.slopjar.entity.renderer.SlopperRenderer;
@@ -26,5 +27,6 @@ public class ModBusClientEvents {
         event.registerEntityRenderer(ModEntities.HORS.get(), HorsRenderer::new);
         event.registerEntityRenderer(ModEntities.SLOPPER.get(), SlopperRenderer::new);
         event.registerEntityRenderer(ModEntities.FRENCHMAN.get(), FrenchManRenderer::new);
+        event.registerEntityRenderer(ModEntities.AYCABRON.get(), AyCabronRenderer::new);
     }
 }
