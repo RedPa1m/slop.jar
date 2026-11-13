@@ -3,7 +3,7 @@
   "biomes": "#minecraft:is_overworld",
   "spawners": {
     "type": "slopjar:slopper",
-    "weight": 10,
+    "weight": 5,
     "minCount": 1,
     "maxCount": 1
   }
