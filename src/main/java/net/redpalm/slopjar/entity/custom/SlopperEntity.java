@@ -15,8 +15,12 @@ public class SlopperEntity extends BaseAggressiveMonster {
     }
 
     @Override
+    public void setPersistenceRequired() {
+        super.setPersistenceRequired();
+    }
+
+    @Override
     public void tick() {
-        if (timeAlive == 0)
         if (timeAlive % 20 == 0) playNoise();
         super.tick();
     }

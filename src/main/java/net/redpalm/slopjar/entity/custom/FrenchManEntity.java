@@ -22,6 +22,11 @@ public class FrenchManEntity extends BaseAggressiveMonster {
     }
 
     @Override
+    public void setPersistenceRequired() {
+        super.setPersistenceRequired();
+    }
+
+    @Override
     public void tick() {
         if (timeAlive == 0) {
             saySpeech();
