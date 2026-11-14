@@ -42,14 +42,19 @@ public class EventHandler {
             switch (x) {
                 case 0:
                     broadcastMessage(tick, "Geometry Dash");
+                    break;
                 case 1:
                     broadcastMessage(tick, "Minecraft");
+                    break;
                 case 2:
                     broadcastMessage(tick, "Videogaem");
+                    break;
                 case 3:
                     broadcastMessage(tick, "контр страйк");
+                    break;
                 case 4:
                     broadcastMessage(tick, "RuPaul's Drag Race");
+                    break;
             }
         }
 

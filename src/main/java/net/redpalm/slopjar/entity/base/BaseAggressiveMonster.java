@@ -104,7 +104,7 @@ public class BaseAggressiveMonster extends Monster {
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this));
-        this.goalSelector.addGoal(1, new LookAtPlayerGoal(this, Player.class, 100));
+        this.goalSelector.addGoal(1, new LookAtPlayerGoal(this, Player.class, 100, 1));
     }
 
     @Override
