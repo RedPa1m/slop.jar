@@ -7,7 +7,6 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
-import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 
@@ -38,7 +37,7 @@ public class ScaryFaceEntity extends Mob {
     }
 
     public static AttributeSupplier.Builder createAttributes() {
-        return Monster.createLivingAttributes()
+        return Mob.createLivingAttributes()
                 .add(Attributes.MAX_HEALTH, 15D)
                 .add(Attributes.FOLLOW_RANGE, 100f)
                 .add(Attributes.MOVEMENT_SPEED, 1f)

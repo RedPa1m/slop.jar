@@ -10,10 +10,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.redpalm.slopjar.SlopJar;
 import net.redpalm.slopjar.entity.ModEntities;
-import net.redpalm.slopjar.entity.custom.AyCabronEntity;
-import net.redpalm.slopjar.entity.custom.FrenchManEntity;
-import net.redpalm.slopjar.entity.custom.HorsEntity;
-import net.redpalm.slopjar.entity.custom.SlopperEntity;
+import net.redpalm.slopjar.entity.custom.*;
 
 @Mod.EventBusSubscriber(modid = SlopJar.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModEventBusEvents {
@@ -24,6 +21,7 @@ public class ModEventBusEvents {
         event.put(ModEntities.SLOPPER.get(), SlopperEntity.createAttributes().build());
         event.put(ModEntities.FRENCHMAN.get(), FrenchManEntity.createAttributes().build());
         event.put(ModEntities.AYCABRON.get(), AyCabronEntity.createAttributes().build());
+        event.put(ModEntities.SCARYFACE.get(), ScaryFaceEntity.createAttributes().build());
     }
 
     @SubscribeEvent
