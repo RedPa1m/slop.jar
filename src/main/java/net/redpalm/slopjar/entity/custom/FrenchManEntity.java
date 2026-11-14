@@ -28,7 +28,7 @@ public class FrenchManEntity extends BaseAggressiveMonster {
 
     @Override
     public void tick() {
-        if (timeAlive == 0) {
+        if (timeAlive == 0 && random.nextInt(4) == 0) {
             saySpeech();
             this.playSound(SoundEvents.AMBIENT_CAVE.get(), 2, 0.8f);
         }

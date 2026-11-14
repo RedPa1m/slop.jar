@@ -22,7 +22,7 @@ public class AyCabronEntity extends PathfinderMob {
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this));
-        this.goalSelector.addGoal(1, new LookAtPlayerGoal(this, Player.class, 100f));
+        this.goalSelector.addGoal(1, new LookAtPlayerGoal(this, Player.class, 100f, 1));
     }
 
     @Override
